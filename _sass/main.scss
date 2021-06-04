@@ -35,10 +35,10 @@ html, body {
     }
 
     nav {
-    	padding-top: 20px;
+    	padding-top: 30px;
         ul {
             list-style-type: none;
-            margin: 0 0 0 10px;
+            margin: 0 0 15px 10px;
             padding: 0;
             a {
                 text-decoration: none;
@@ -47,6 +47,13 @@ html, body {
             a:hover {
                 color: $color-text-xdark;
             }
+            &.primary {
+                margin-bottom: 20px;
+            }
+        }
+        .section-title {
+            margin: 0 0 5px 10px;
+            font-family: $font-primary-500;
         }
     }
 }
@@ -135,7 +142,7 @@ html, body {
         @include media-breakpoint-up(sm) {
             @include make-col;
         }
-        div {
+        .frame {
             border-top: 1px solid $color-light-gray;
             background-color: $gray-100; 
             padding: 10px 20px;

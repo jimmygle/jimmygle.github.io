@@ -25,15 +25,8 @@
                         <a href="{{ site.baseurl }}{% link index.html %}" class="logo">
                             <h1>jg</h1>
                         </a>
-
                         <nav class="sticky-top">
-                            <ul>
-                                <li><a href="{{ site.baseurl }}{% link index.html %}">Home</a></li>
-                                <li><a href="{{ site.baseurl }}{% link _pages/about.html %}">About</a></li>
-                            </ul>
-                            <ul>
-                                <li><a href="{{ site.baseurl }}{% link _pages/styleguide.html %}">Styleguide</a></li>
-                            </ul>                                
+                            {% include nav.html %}
                         </nav>
                     </header>
 
@@ -51,7 +44,10 @@
                     <footer class="for-sidebar">
                     </footer>
                     <footer class="for-content">
-                        <div>Last updated 46 days ago / Have a great day!</div>                        
+                        <div class="frame d-flex">
+                            <div class="flex-fill">Site last updated on {{site.time | date: "%-b. %-d, %Y"}}</div>
+                            <div class="flex-fill text-end">Have a great day!</div>
+                        </div>                            
                     </footer>
                 </div>
             </div>

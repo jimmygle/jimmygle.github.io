@@ -1,0 +1,14 @@
+
+<ul class="primary">
+	<li><a href="{{ site.baseurl }}{% link index.html %}">Home</a></li>
+	<li><a href="{{ site.baseurl }}{% link _pages/about.html %}">About</a></li>
+	<li><a href="{{ site.baseurl }}{% link _pages/styleguide.html %}">Styleguide</a></li>
+</ul>
+
+<div class="section-title">Interests</div>
+<ul class="interests">
+
+	{% for category in site.categories %}
+		<li><a href="/{{ category[0] | slugify }}">{{ category[0] | capitalize }}</a></li>
+	{% endfor %}
+</ul>
