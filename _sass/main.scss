@@ -1,0 +1,144 @@
+@import "colors";
+
+html, body {
+    height: 100%;
+}
+
+
+//
+// Global Sidebar/Navigation
+//
+.sidebar {
+    @include make-col-ready();
+    @include media-breakpoint-up(md) {
+        width: 200px;
+    }
+
+    font-family: $font-primary-light;
+    line-height: 2;
+
+    a.logo {
+        text-decoration: none;
+
+        h1 {
+            text-align: center;
+            font-size: 80px;  // TODO: Convert to variable
+            line-height: 160px;
+            margin: 0;
+            padding: 0;
+            border-bottom: 1px solid $color-light-gray;
+            font-family: $font-primary-xbold;
+            color: $color-text-navy;
+            vertical-align: middle;
+            background-color: $gray-100;
+        }
+    }
+
+    nav {
+    	padding-top: 20px;
+        ul {
+            list-style-type: none;
+            margin: 0 0 0 10px;
+            padding: 0;
+            a {
+                text-decoration: none;
+                color: $color-text-primary;
+            }
+            a:hover {
+                color: $color-text-xdark;
+            }
+        }
+    }
+}
+
+
+//
+// Main content container
+//
+.content {
+	@include make-col-ready();
+	@include media-breakpoint-up(sm) {
+    	@include make-col;
+  	}
+    
+  	font-family: 'Radley', serif;
+	font-size: 18px;
+	line-height: 2rem;
+    margin-bottom: 40px;
+
+  	.title {
+        height: 160px;
+        margin-bottom: 20px;
+
+        h1 {
+  	 	    font-family: $font-primary-bold;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: $color-text-primary;
+            text-align: center;
+        }
+  	}
+
+    a {
+        border-bottom: 1px solid $color-text-navy;
+        color: $color-text-navy;
+        text-decoration: none;
+    }
+    a:hover {
+        border-bottom: 1px solid $color-text-primary;
+        color: $color-text-primary;
+    }
+
+    img {
+        max-width: 90%;
+        height: auto;
+        margin: 0 auto 1rem auto;
+        padding: 0.25rem;
+        border-radius: 0.25rem;
+        border: 1px solid $color-light-gray;
+        background-color: $white;
+        display: block;
+    }
+}
+
+
+//
+// Footers
+//
+.footers {        
+    margin-top: auto !important;
+
+    font-family: $font-primary-lighti;
+    line-height: 2;
+    font-size: 14px;
+    color: $color-text-primary;
+
+    footer.for-sidebar {
+        @include make-col-ready();
+        @include media-breakpoint-up(md) {
+            width: 200px;
+        }
+        div {
+            border-top: 1px solid $color-light-gray;
+            background-color: $gray-100; 
+            padding: 10px;
+            text-align: center;       
+        }
+    }
+
+    footer.for-content {
+        @include make-col-ready();
+        @include media-breakpoint-up(sm) {
+            @include make-col;
+        }
+        div {
+            border-top: 1px solid $color-light-gray;
+            background-color: $gray-100; 
+            padding: 10px 20px;
+        }        
+    }
+}
