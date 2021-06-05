@@ -2,7 +2,7 @@
 layout: post
 title: "\"This too shall pass\""
 subtitle: A new attitude toward my namesake.
-category: reflections
+category: reflection
 permalink: /this-too-shall-pass/
 ---
 

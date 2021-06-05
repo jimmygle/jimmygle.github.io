@@ -2,7 +2,7 @@
 layout: post
 title: "Post Ideas"
 permalink: /post-ideas/
-category: zzzHidden
+category: hidden
 ---
 
 ### Technical
@@ -24,3 +24,5 @@ category: zzzHidden
   * Satisfying curiosity is an addiction
   * Envy of people that have singular obsessions
   * There are pros to it of course
+* Bitcoin mining
+* 

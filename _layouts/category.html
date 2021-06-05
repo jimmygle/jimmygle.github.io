@@ -1,0 +1,13 @@
+---
+layout: page
+---
+{%- assign category_slug = page.permalink | replace: '/', '' -%}
+
+{% for post in site.posts %}
+    {% if post.categories contains page.category_slug %}
+    	<article>
+    		{% include post_title.html title=post.title subtitle=post.subtitle url=post.url %}
+    		{{ post.content }}
+    	</article>
+    {% endif %}
+{% endfor %}

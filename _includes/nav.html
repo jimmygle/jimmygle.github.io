@@ -1,14 +1,30 @@
+{% assign current = page.url | downcase | split: '/' %}
 
+<!-- Page Navigation -->
 <ul class="primary">
-	<li><a href="{{ site.baseurl }}{% link index.html %}">Home</a></li>
-	<li><a href="{{ site.baseurl }}{% link _pages/about.html %}">About</a></li>
-	<li><a href="{{ site.baseurl }}{% link _pages/styleguide.html %}">Styleguide</a></li>
+	<li {% if current[1] == 'index.html' %}class="active"{% endif %}>
+		<a href="{{ site.baseurl }}/">
+			Home
+		</a>
+	</li>
+	<li {% if current[1] == 'about' %}class="active"{% endif %}>
+		<a href="{{ site.baseurl }}{% link _pages/about.html %}">
+			About
+		</a>
+	</li>
 </ul>
 
+<!-- Category Navigation -->
 <div class="section-title">Interests</div>
 <ul class="interests">
-
-	{% for category in site.categories %}
-		<li><a href="/{{ category[0] | slugify }}">{{ category[0] | capitalize }}</a></li>
-	{% endfor %}
+	{% for category in site.categories | sort -%}
+		{%- assign category_slug = category[0] | slugify -%}
+		{%- if category_slug != 'hidden' -%}
+			<li {% if current[1] == category_slug %}class="active"{% endif %}>
+				<a href="/{{ category_slug }}">
+					{{ category[0] | capitalize }}
+				</a>
+			</li>
+		{%- endif -%}
+	{%- endfor %}
 </ul>

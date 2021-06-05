@@ -54,3 +54,70 @@ permalink: /styleguide/
    Proin sit amet nibh in risus consequat pulvinar. Vivamus id viverra nulla.
 </p>
 
+---
+
+<h1>H1 Header with Paragraph</h1>
+<p>
+    Sed vitae feugiat justo. Etiam volutpat purus sed dolor blandit, ut ornare 
+    ligula dapibus. Vestibulum semper non dolor id euismod. Nunc quis posuere mi.
+    Maecenas eget erat ac dolor pellentesque posuere et luctus sem. Nulla 
+    tincidunt magna in sem vestibulum luctus.
+</p>
+
+<h2>H2 Header with Lists</h2>
+<ul>
+    <li>Unordered list</li>
+    <li>
+        Nunc quis posuere mi. Maecenas eget erat ac dolor pellentesque posuere 
+        et luctus sem. Nulla tincidunt magna in sem vestibulum luctus. 
+    </li>
+</ul>
+<ol>
+    <li>Ordered list</li>
+    <li>
+        Nunc quis posuere mi. Maecenas eget erat ac dolor pellentesque posuere 
+        et luctus sem. Nulla tincidunt magna in sem vestibulum luctus. 
+    </li>
+    <li>This is an ordered list item with an unordered list below it:
+        <ul>
+            <li>Unordered list</li>
+            <li>
+                Nunc quis posuere mi. Maecenas eget erat ac dolor pellentesque posuere 
+                et luctus sem. Nulla tincidunt magna in sem vestibulum luctus. 
+            </li>
+        </ul>
+    </li>
+</ol>
+
+<h3>H3 Header with Code</h3>
+<p>This is an example of some <code>printf "inline code"</code>.</p>
+<pre><code>
+    /* In some cases, both sendpage() and sendmsg() could have added
+     * an skb to the write queue, but failed adding payload on it.
+     * We need to remove it to consume less memory, but more
+     * importantly be able to generate EPOLLOUT for Edge Trigger epoll()
+     * users.
+     */
+    void tcp_remove_empty_skb(struct sock *sk, struct sk_buff *skb)
+    {
+        if (skb && !skb->len) {
+            tcp_unlink_write_queue(skb, sk);
+            if (tcp_write_queue_empty(sk))
+                tcp_chrono_stop(sk, TCP_CHRONO_BUSY);
+            sk_wmem_free_skb(sk, skb);
+        }
+    }
+</code></pre>
+
+<h4>H4 Header with Quotes</h4>
+<p>This is an example of some <q>inline quote</q> brilliance.</p>
+<blockquote>
+    Peace does not mean an absence of conflicts; differences will always be 
+    there. Peace means solving these differences through peaceful means; through 
+    dialogue, education, knowledge; and through humane ways.
+</blockquote>
+
+
+<h5>H5 Header</h5>
+<h6>H6 Header</h6>
+
