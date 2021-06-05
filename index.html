@@ -3,8 +3,15 @@ layout: page
 title: Home
 ---
 
-<div class="title d-flex flex-column justify-content-center">
-	<div class="align-self-center">
-		<h1>Howdy!</h1>
-	</div>
-</div>
+{% for post in site.posts limit:5 %}
+	<article>
+		{% include post_title.html title=post.title subtitle=post.subtitle url=post.url %}
+
+		{{ post.content }}
+
+        <div class="frame d-flex">
+            <div class="flex-fill">Site last updated on {{site.time | date: "%-b. %-d, %Y"}}</div>
+            <div class="flex-fill text-end">Have a great day!</div>
+        </div> 			
+	</article>
+{% endfor %}

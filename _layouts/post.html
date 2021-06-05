@@ -1,5 +1,16 @@
 ---
 layout: default
 ---
+<header class="post-meta sticky-top" id="post-meta">
+	<div class="d-flex">
+	    <div class="flex-fill d-none" id="post-meta-title">{{ page.title }}</div>
+	    <div class="flex-fill text-end">Posted in <a href="#">Zzzhidden</a> on Jun. 4, 2021.</div>
+	</div>
+</header>
 
-{{content}}
+<article>
+	{%- include post_title.html title=page.title subtitle=page.subtitle -%}
+
+	{{ content }}
+</article>
+

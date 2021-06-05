@@ -4,7 +4,6 @@ html, body {
     height: 100%;
 }
 
-
 //
 // Global Sidebar/Navigation
 //
@@ -43,17 +42,18 @@ html, body {
             a {
                 text-decoration: none;
                 color: $color-text-primary;
-            }
-            a:hover {
-                color: $color-text-xdark;
+                &:hover {
+                    color: $color-text-xdark;
+                }                
             }
             &.primary {
                 margin-bottom: 20px;
             }
         }
         .section-title {
-            margin: 0 0 5px 10px;
+            margin: 0 10px 5px 10px;
             font-family: $font-primary-500;
+            border-bottom: 1px solid $color-light-gray;            
         }
     }
 }
@@ -77,6 +77,13 @@ html, body {
         height: 160px;
         margin-bottom: 20px;
 
+        a {
+            color: inherit;
+            &:hover {
+                color: inherit;
+            }
+        }
+
         h1 {
   	 	    font-family: $font-primary-bold;
             font-size: 40px;
@@ -94,10 +101,10 @@ html, body {
         border-bottom: 1px solid $color-text-navy;
         color: $color-text-navy;
         text-decoration: none;
-    }
-    a:hover {
-        border-bottom: 1px solid $color-text-primary;
-        color: $color-text-primary;
+        &:hover {
+            border-bottom: 1px solid $color-text-primary;
+            color: $color-text-primary;
+        }
     }
 
     img {
@@ -109,6 +116,16 @@ html, body {
         border: 1px solid $color-light-gray;
         background-color: $white;
         display: block;
+    }
+
+    .post-meta {
+        font-family: $font-primary-light;
+        line-height: 2;
+        font-size: 14px;
+        color: $color-text-primary;
+        border-bottom: 1px solid $color-light-gray;
+        background-color: $gray-100; 
+        padding: 0px 10px;
     }
 }
 
