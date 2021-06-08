@@ -43,6 +43,15 @@ $font-primary: $font-primary-400;
     src: url("/assets/fonts/Montserrat/Montserrat-Medium.ttf");
 }
 $font-primary-500: 'Montserrat-500', sans-serif;
+$font-primary-medium: $font-primary-500;
+
+@font-face {
+    font-family: 'Montserrat-500i';
+    src: url("/assets/fonts/Montserrat/Montserrat-MediumItalic.ttf");
+}
+$font-primary-500i: 'Montserrat-500i', sans-serif;
+$font-primary-mediumi: $font-primary-500i;
+
 
 @font-face {
     font-family: 'Montserrat-600';

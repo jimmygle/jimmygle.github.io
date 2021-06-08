@@ -1,16 +1,41 @@
 ---
 layout: default
 ---
-<header class="post-meta sticky-top" id="post-meta">
-	<div class="d-flex">
-	    <div class="flex-fill d-none" id="post-meta-title">{{ page.title }}</div>
-	    <div class="flex-fill text-end">Posted in <a href="#">Zzzhidden</a> on Jun. 4, 2021.</div>
-	</div>
-</header>
 
 <article>
-	{%- include post_title.html title=page.title subtitle=page.subtitle -%}
+    {%- include post_title.html title=page.title subtitle=page.subtitle -%}
 
-	{{ content }}
+    <header class="post-meta sticky-top" id="post-meta">
+        <div class="d-flex">
+            <div class="flex-fill" id="post-meta-title">
+                {{ page.title }}
+            </div>
+            <div class="flex-fill text-end">
+                {%- if page.categories.size > 0 %}
+                    Posted in 
+                    {%- for category in page.categories -%}
+                        {%- if page.categories.size > 1 -%}
+                            {%- if category == page.categories.last -%}
+                                , and 
+                            {%- elsif category != page.categories.first -%}
+                                ,
+                            {%- endif %}
+                        {%- endif %}
+                        <a href="/{{ category | slugify }}">
+                            {{- category | capitalize -}}
+                        </a>
+                    {%- endfor %}
+                {%- endif %}
+                on {{ page.date | date: "%-b. %-d, %Y" }}
+            </div>
+            <div class="scroll-to-top flex-grow-0">
+                <img src="/assets/icons/up-arrow.svg" class="arrow" alt="Up">
+            </div>
+        </div>
+    </header>
+
+    <div id="post-content">
+        {{ content }}
+    </div>
 </article>
 

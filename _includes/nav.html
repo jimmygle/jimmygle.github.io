@@ -7,16 +7,16 @@
 			Home
 		</a>
 	</li>
-	<li {% if current[1] == 'about' %}class="active"{% endif %}>
+<!-- 	<li {% if current[1] == 'about' %}class="active"{% endif %}>
 		<a href="{{ site.baseurl }}{% link _pages/about.html %}">
 			About
 		</a>
-	</li>
+	</li> -->
 </ul>
 
 <!-- Category Navigation -->
-<div class="section-title">Interests</div>
-<ul class="interests">
+<div class="section-title">Curiosities</div>
+<ul class="curiosities">
 	{% for category in site.categories | sort -%}
 		{%- assign category_slug = category[0] | slugify -%}
 		{%- if category_slug != 'hidden' -%}

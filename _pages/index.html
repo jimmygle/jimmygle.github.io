@@ -2,17 +2,51 @@
 layout: page
 title: Home
 permalink: /index.html
+body_id: home
 ---
 
-{% for post in site.posts limit:5 %}
+<div class="intro">
+	<h1>Howdy!</h1>
+	<p class="big">
+		Welcome to my little corner of the world. Here you will find a bit of 
+		information about who I am, but my deeper intention is for this to serve 
+		as a personal canvas for exploring my curiosities. 
+	</p>
+</div>
+
+<div class="about">
+
+	<h2>About</h2>
+	<p>
+		The Pacific Northwest has always felt like home. It's been the generous
+		backdrop for most of my life's seasons so far. I hope to spend the rest 
+		of my days here. I've lived all over Washington state, but currently 
+		reside in a small log cabin a couple hours north of Seattle with my 
+		partner and a couple cats. It's peaceful.
+	</p>
+	<div class="image-with-caption">
+		<img src="/assets/images/profile-photo.jpg" alt="Photo of Jimmy eating while looking at Denali">
+		<span>Enjoying dinner in Denali NP, 2019</span>
+	</div>	
+	<p>
+		When not enjoying the Northwest's natural beauty, I spend most of my days
+		working in tech. I've been writing code since the age of 11, and unbeknownst 
+		to me, that first HTML book I purchased from CompUSA was also my
+		ticket onto the rocket ship of the Internet's explosive presence in our 
+		lives. I was very lucky to come of age with the Internet.
+	</p>
+	<p>
+		In everything I do, curiosity is generally driving me. The destination
+		is always growth of some form, whether I'm aware of it or not. This has 
+		manifested in a lot of different ways throughout my life, and this site is 
+		an effort to explore and make some sense of it.
+	</p>
+</div>
+
+
+{% for post in site.posts limit:1 %}
 	<article>
 		{% include post_title.html title=post.title subtitle=post.subtitle url=post.url %}
-
 		{{ post.content }}
-
-        <div class="frame d-flex">
-            <div class="flex-fill">Site last updated on {{site.time | date: "%-b. %-d, %Y"}}</div>
-            <div class="flex-fill text-end">Have a great day!</div>
-        </div> 			
 	</article>
 {% endfor %}

@@ -8,8 +8,10 @@ category: hidden
 ### Functionality
 
 * ~~Category landing pages~~
-* Finish post meta data (sticky header)
+* ~~Finish post meta data (sticky header)~~
+* Add tags somewhere on posts
 * Finish styleguide/kitchen sink documentation
+* Why is Jekyll looking for /favicon.ico?
 * ~~404 page~~
 
 ### Aesthetics

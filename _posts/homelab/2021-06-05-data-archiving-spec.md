@@ -2,8 +2,9 @@
 layout: post
 title: "Data Archiving Specification"
 subtitle: "An effort to build an intuitive, sustainable schema for data archival."
-date: 2021-06-04 11:00:00 -0700
-category: homelab
+date: 2021-06-05 12:00:00 -0700
+permalink: /homelab/data-archiving-spec.html
+categories: [ homelab ]
 tags: 'data storage'
 ---
 
@@ -44,22 +45,31 @@ organize data.
 > TODO: Add sources here.
  
 ### By data type
-  
-Intent:
 
-  * "I want to browse all the books in my collection."
-  * "I want to point media player to movies directory."
-
-Pros:
-
-  * Can be easily digested by external apps
-  * Less effort manually organizing by arbitrary subjects
-  * Less total directories/nesting
-
-Cons:
-
-  * Directory structure isn't intuitive when looking for specific subject
-  * Required external dependencies for organizing by topic
+<dl class="row">
+  <dt class="col-sm-2">Intent:</dt>
+  <dd class="col-sm-10">
+    <ul>
+      <li><q>I want to browse all the books in my collection.</q></li>
+      <li><q>I want to point media player to movies directory.</q></li>
+    </ul>
+  </dd>
+  <dt class="col-sm-2">Pros:</dt>
+  <dd class="col-sm-10">
+    <ul>
+      <li>Can be easily digested by external apps</li>
+      <li>Less effort manually organizing by arbitrary subjects</li>
+      <li>Less total directories/nesting</li>
+    </ul>
+  </dd>
+  <dt class="col-sm-2">Cons:</dt>
+  <dd class="col-sm-10">
+    <ul>
+      <li>Directory structure isn't intuitive when looking for specific subject</li>
+      <li>Required external dependencies for organizing by topic</li>
+    </ul>
+  </dd>  
+</dl>
 
 
 ### By subject

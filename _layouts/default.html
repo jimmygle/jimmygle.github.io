@@ -21,7 +21,7 @@
         <link href='https://fonts.googleapis.com/css?family=Radley:400,400italic' rel='stylesheet' type='text/css'>    
         <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
     </head>
-    <body class="d-flex flex-column h-100">
+    <body {% if page.body_id %}id="{{ page.body_id }}" {% endif %}class="d-flex flex-column h-100">
 
         <main class="flex-shrink-0">
             <div class="container">
@@ -51,14 +51,14 @@
                     </footer>
                     <footer class="for-content">
                         <div class="frame d-flex">
-                            <div class="flex-fill">Site last updated on {{site.time | date: "%-b. %-d, %Y"}}</div>
-                            <div class="flex-fill text-end">Have a great day!</div>
+                            <div class="flex-fill text-center">Have a great day!</div>
                         </div>                            
                     </footer>
                 </div>
             </div>
         </div>
 
-        </div>
+        <script type="text/javascript" src="/assets/js/app.js"></script>
+
     </body>
 </html>
