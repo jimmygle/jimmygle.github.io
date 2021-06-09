@@ -1,11 +1,14 @@
 ---
 layout: post
-title: "Data Archiving Specification"
-subtitle: "An effort to build an intuitive, sustainable schema for data archival."
-date: 2021-06-05 12:00:00 -0700
+title: Data Archiving Specification
+subtitle: 'An effort to build an intuitive, sustainable schema for data archival.'
+date: '2021-06-05 12:00:00 -0700'
 permalink: /homelab/data-archiving-spec.html
-categories: [ homelab ]
-tags: 'data storage'
+categories:
+  - homelab
+tags: 
+  - 'data storage'
+slug: data-archiving-specification
 ---
 
 This page serves as a home for my evolving approach to digital data archival.

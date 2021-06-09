@@ -1,7 +1,121 @@
 @import "colors";
 
 html, body {
+    min-height: 100%;
     height: 100%;
+}
+
+body#home {
+    font-family: 'Radley', serif;
+    font-size: 18px;
+    line-height: 2rem;
+
+    img {
+        max-width: 90%;
+        height: auto;
+        margin: 0 auto 1rem auto;
+        padding: 0.25rem;
+        border-radius: 0.25rem;
+        border: 1px solid $color-light-gray;
+        background-color: $white;
+        display: block;
+    }
+
+    .image-with-caption {
+        max-width: 90%;
+        height: auto;
+        margin: 0 0 1rem 0;
+        border: 0;
+        display: inline-block;
+        text-align: center;
+
+        &> img {
+            border: 0;
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        &> span {
+            color: $color-text-primary;
+            font-family: $font-primary-light;
+            font-size: .75rem;
+            line-height: 1.25rem;
+        }
+    }
+
+    .home-title {
+        background-color: $color-text-navy;
+        width: 50%;
+        min-height: 100%;
+        padding: 8rem 4rem 4rem 4rem;
+
+        h1 {
+            text-align: center;
+            font-size: 7rem;
+            margin-bottom: 6rem;
+            padding: 0;
+            font-family: $font-primary-xbold;
+            color: $color-light-gray;
+            vertical-align: middle;
+        }
+
+        p, nav {
+            font-size: 24px;
+            line-height: 2;
+            color: $gray-500;
+            font-family: 'Radley', serif;
+
+            a {
+                color: $gray-400;
+                border-bottom: 1px solid $gray-400;
+                text-decoration: none;
+                &:hover {
+                    border-bottom: 1px solid $gray-300;
+                    color: $gray-300;
+                }
+            } 
+        }
+
+        nav {
+            margin-top: 3rem;
+        }
+    }
+
+    .home-content {
+        background-color: $gray-100;
+        width: 50%;
+        min-height: 100%;
+        padding: 8rem 4rem 4rem 4rem;
+
+        h1 {
+            text-align: center;
+            font-size: 7rem;
+            margin-bottom: 6rem;
+            padding: 0;
+            font-family: $font-primary-xbold;
+            color: $color-text-navy;
+            vertical-align: middle;
+        }
+
+        .about {
+            font-size: 24px;
+            line-height: 2;
+            color: $color-text-navy;
+            font-family: 'Radley', serif;
+
+            &> h2 {
+                margin-top: 0;
+            }
+
+            &> .image-with-caption {
+                width: 250px;
+                float: left;
+                margin-right: 1rem;
+            }
+        }
+    }
+
 }
 
 //
