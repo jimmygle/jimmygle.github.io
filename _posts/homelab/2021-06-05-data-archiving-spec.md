@@ -227,5 +227,6 @@ at least these three aspects that need to be considered:
 
 * [/r/datacurator](reddit.com/r/datacurator)
 * [gitmind.com/app/doc/7802011078](gitmind.com/app/doc/7802011078)
+* [Alternative Sorting Ideas](https://www.reddit.com/r/datacurator/comments/nwegdu/alternative_sorting_ideas/)
 
 > TODO: Find an add more of the resources I've used.
