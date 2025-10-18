@@ -6,3 +6,9 @@ services:
       - 4000:4000
     volumes:
       - .:/srv/jekyll
+    logging:
+      driver: syslog
+      options: 
+        syslog-address: "udp://172.17.0.4:1514"
+        syslog-format: "rfc3164"
+        tag: jekyll-local

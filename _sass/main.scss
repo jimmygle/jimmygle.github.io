@@ -5,188 +5,8 @@ html, body {
     height: 100%;
 }
 
-body#home {
-    font-family: 'Radley', serif;
-    font-size: 18px;
-    line-height: 2rem;
-
-    img {
-        max-width: 90%;
-        height: auto;
-        margin: 0 auto 1rem auto;
-        padding: 0.25rem;
-        border-radius: 0.25rem;
-        border: 1px solid $color-light-gray;
-        background-color: $white;
-        display: block;
-    }
-
-    .image-with-caption {
-        max-width: 90%;
-        height: auto;
-        margin: 0 0 1rem 0;
-        border: 0;
-        display: inline-block;
-        text-align: center;
-
-        &> img {
-            border: 0;
-            max-width: 100%;
-            margin: 0;
-            padding: 0;
-        }
-
-        &> span {
-            color: $color-text-primary;
-            font-family: $font-primary-light;
-            font-size: .75rem;
-            line-height: 1.25rem;
-        }
-    }
-
-    .home-title {
-        background-color: $color-text-navy;
-        width: 50%;
-        min-height: 100%;
-        padding: 8rem 4rem 4rem 4rem;
-
-        h1 {
-            text-align: center;
-            font-size: 7rem;
-            margin-bottom: 6rem;
-            padding: 0;
-            font-family: $font-primary-xbold;
-            color: $color-light-gray;
-            vertical-align: middle;
-        }
-
-        p, nav {
-            font-size: 24px;
-            line-height: 2;
-            color: $gray-500;
-            font-family: 'Radley', serif;
-
-            a {
-                color: $gray-400;
-                border-bottom: 1px solid $gray-400;
-                text-decoration: none;
-                &:hover {
-                    border-bottom: 1px solid $gray-300;
-                    color: $gray-300;
-                }
-            } 
-        }
-
-        nav {
-            margin-top: 3rem;
-        }
-    }
-
-    .home-content {
-        background-color: $gray-100;
-        width: 50%;
-        min-height: 100%;
-        padding: 8rem 4rem 4rem 4rem;
-
-        h1 {
-            text-align: center;
-            font-size: 7rem;
-            margin-bottom: 6rem;
-            padding: 0;
-            font-family: $font-primary-xbold;
-            color: $color-text-navy;
-            vertical-align: middle;
-        }
-
-        .about {
-            font-size: 24px;
-            line-height: 2;
-            color: $color-text-navy;
-            font-family: 'Radley', serif;
-
-            &> h2 {
-                margin-top: 0;
-            }
-
-            &> .image-with-caption {
-                width: 250px;
-                float: left;
-                margin-right: 1rem;
-            }
-        }
-    }
-
-}
-
-//
-// Global Sidebar/Navigation
-//
-.sidebar {
-    @include make-col-ready();
-    @include media-breakpoint-up(md) {
-        width: 200px;
-    }
-
-    font-family: $font-primary-light;
-    line-height: 2;
-
-    a.logo {
-        text-decoration: none;
-
-        h1 {
-            text-align: center;
-            font-size: 80px;  // TODO: Convert to variable
-            line-height: 160px;
-            margin: 0;
-            padding: 0;
-            border: 1px solid $color-light-gray;
-            border-top: none;
-            font-family: $font-primary-xbold;
-            color: $color-text-navy;
-            vertical-align: middle;
-            background-color: $gray-100;
-        }
-    }
-
-    nav {
-    	padding-top: 30px;
-        ul {
-            list-style-type: none;
-            margin: 0 0 15px 0;
-            padding: 0;
-            a {
-                text-decoration: none;
-                color: $color-text-primary;
-                &:hover {
-                    color: $color-text-xdark;
-                }
-            }
-            &.primary {
-                margin-bottom: 20px;
-            }
-            li {
-                margin-left: 10px;
-                position: relative;
-                &.active {
-                    a {
-                        color: $color-text-xdark;
-                    }
-                    a:before {
-                        content: "\00BB";
-                        position: absolute;
-                        top: -1px;
-                        left: -12px;
-                    }                                
-                }
-            }
-        }
-        .section-title {
-            margin: 0 10px 5px 10px;
-            font-family: $font-primary-500;
-            border-bottom: 1px solid $color-light-gray;            
-        }
-    }
-}
+@import "pages/home";
+@import "components/sidebar";
 
 //
 // Main content container
@@ -222,6 +42,35 @@ body#home {
         background-color: $white;
         display: block;
     }
+
+    & .image-with-caption {
+        max-width: 90%;
+        height: auto;
+        margin: 0 0 $spacer 0;
+        border: 0;
+        display: inline-block;
+        text-align: center;
+        line-height: 0.9rem;
+
+        &> img {
+            border: 0;
+            max-width: 100%;
+            margin: 0 0 ($spacer * 0.5) 0;
+            padding: 0;
+        }
+
+        &> span {
+            color: $color-text-primary;
+            font-family: $font-primary-light;
+            font-size: .75rem;
+            font-style: italic;
+        }
+    }
+
+    // & div.disclaimer {
+    //     @include alert-variant();
+    //     margin-bottom: 2rem;
+    // }
 
     & blockquote {
         padding: 1rem 1rem 1rem 1.5rem;
@@ -281,30 +130,6 @@ body#home {
             margin-right: 1rem;
         }
     }
-
-    .image-with-caption {
-        max-width: 90%;
-        height: auto;
-        margin: 0 0 1rem 0;
-        border: 0;
-        display: inline-block;
-        text-align: center;
-
-        &> img {
-            border: 0;
-            max-width: 100%;
-            margin: 0;
-            padding: 0;
-        }
-
-        &> span {
-            color: $color-text-primary;
-            font-family: $font-primary-light;
-            font-size: .75rem;
-            line-height: 1.25rem;
-        }
-    }
-
 
     // Content title block
     & .title {

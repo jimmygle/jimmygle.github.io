@@ -1,0 +1,14 @@
+<ul>
+    {% assign tag_name = include.tag %}
+    {% for post in site.posts %}
+        {% if post.tags contains tag_name %}
+            <li>
+                {% if post.url == page.url %}
+                    <strong>{{ post.title | escape }}</strong>
+                {% else %}
+                    <a href="{{ post.url | relative_url }}" title="Navigate to {{ post.title | escape }}">{{ post.title }}</a>
+                {% endif %}
+            </li>
+        {% endif %}
+    {% endfor %}
+</ul>

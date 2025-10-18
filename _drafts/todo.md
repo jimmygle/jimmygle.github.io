@@ -40,7 +40,7 @@ category: hidden
 
 ### Fun/Interesting Ideas
 
-_Don't bite of more than you'll do!_
+_Don't bite off more than you'll do!_
 
 * Quotes page/integration - it'd be fun to build it with JS
 * Book list with reviews

@@ -7,11 +7,21 @@
 			Home
 		</a>
 	</li>
-<!-- 	<li {% if current[1] == 'about' %}class="active"{% endif %}>
+	<li {% if current[1] == 'work' %}class="active"{% endif %}>
+		<a href="{{ site.baseurl }}{% link _pages/work.html %}">
+			Work
+		</a>
+	</li>
+	<li {% if current[1] == 'about' %}class="active"{% endif %}>
 		<a href="{{ site.baseurl }}{% link _pages/about.html %}">
 			About
 		</a>
-	</li> -->
+	</li>
+	<li {% if current[1] == 'contact' %}class="active"{% endif %}>
+		<a href="{{ site.baseurl }}{% link _pages/contact.html %}">
+			Contact
+		</a>
+	</li>
 </ul>
 
 <!-- Category Navigation -->
