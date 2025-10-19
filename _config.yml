@@ -23,7 +23,7 @@ email: jimmygle@protonmail.com
 description: >-4 
     An online presence for Jimmy that's rarely updated. Have a great day!
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://jimmygleason.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "jimmygleason.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  jimmygle
 
 permalink: none
