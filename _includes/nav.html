@@ -38,3 +38,25 @@
 		{%- endif -%}
 	{%- endfor %}
 </ul>
+
+{% if jekyll.environment == "development" %}
+	<!-- Development Environment Options -->
+	<div class="section-title">Admin</div>
+	<ul>
+		<li {% if current[1] == 'todo' %}class="active"{% endif %}>
+			<a href="{{ site.baseurl }}{% link _drafts/todo.md %}">
+				TODO
+			</a>
+		</li>
+		<li {% if current[1] == 'post-ideas' %}class="active"{% endif %}>
+			<a href="{{ site.baseurl }}{% link _drafts/post-ideas.md %}">
+				Post Ideas
+			</a>
+		</li>
+		<li {% if current[1] == 'post-drafts' %}class="active"{% endif %}>
+			<a href="{{ site.baseurl }}{% link _drafts/post-drafts.html %}">
+				Post Drafts
+			</a>
+		</li>
+	</ul>
+{% endif %}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "TODO/FIXME"
+title: "TODO / FIXME"
 permalink: /todo/
 category: hidden
 ---
